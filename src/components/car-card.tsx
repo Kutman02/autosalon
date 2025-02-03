@@ -1,7 +1,5 @@
 "use client"
 
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { Phone } from 'lucide-react'
 import { toast } from 'sonner'
 import type { Car } from '@/types/car'

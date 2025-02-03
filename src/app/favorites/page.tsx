@@ -11,8 +11,8 @@ import type { Car } from '@/types/car';
 
 export default function FavoritesPage() {
   const { favorites, toggleFavorite } = useFavorites();
-  const allCars = getCars();
-  const favoriteCars = allCars.filter((car) => favorites.includes(car.id));
+  const cars = getCars();
+  const favoriteCars = cars.filter((car) => favorites.includes(car.id));
 
   const handleClearAll = () => {
     toggleFavorite('');
@@ -21,19 +21,17 @@ export default function FavoritesPage() {
 
   if (favoriteCars.length === 0) {
     return (
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-6">Избранное</h1>
-        <div className="text-center py-12">
-          <p className="text-muted-foreground">В избранном пока нет автомобилей</p>
-        </div>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-6">Избранное</h1>
+        <p className="text-center text-muted-foreground">В избранном пока ничего нет</p>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Избранное</h1>
+        <h1 className="text-2xl font-bold">Избранное</h1>
         <Button
           variant="destructive"
           onClick={handleClearAll}
@@ -44,7 +42,7 @@ export default function FavoritesPage() {
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {favoriteCars.map((car) => (
           <CarCard
             key={car.id}
