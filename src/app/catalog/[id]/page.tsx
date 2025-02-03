@@ -1,23 +1,51 @@
 import { Suspense } from 'react';
-import { getCarById } from '@/lib/cars';
+import { getCarById, getCars } from '@/lib/cars';
 import { CarDetails } from './car-details';
 import { Skeleton } from '@/components/ui/skeleton';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+import type { PageProps } from '@/types/page';
 
 export const revalidate = 3600; // Обновлять кэш каждый час
 
-export default async function CarPage({ params }: { params: { id: string } }) {
-  const car = await getCarById(params.id);
+type SearchParams = { [key: string]: string | string[] | undefined };
 
-  if (!car) {
-    notFound();
+type CatalogItemParams = {
+  id: string;
+};
+
+// Определяем типы для страницы
+export default async function CatalogItemPage({
+  params,
+  searchParams,
+}: PageProps<CatalogItemParams>) {
+  try {
+    const car = await getCarById(params.id);
+
+    if (!car) {
+      notFound();
+    }
+
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Suspense fallback={<CarDetailsSkeleton />}>
+          <CarDetails car={car} />
+        </Suspense>
+      </div>
+    );
+  } catch (error) {
+    console.error('Error loading car:', error);
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold text-red-500">
+          Произошла ошибка при загрузке данных
+        </h1>
+        <p className="text-muted-foreground">
+          Пожалуйста, попробуйте обновить страницу
+        </p>
+      </div>
+    );
   }
-
-  return (
-    <Suspense fallback={<CarDetailsSkeleton />}>
-      <CarDetails car={car} />
-    </Suspense>
-  );
 }
 
 function CarDetailsSkeleton() {
@@ -45,4 +73,47 @@ function CarDetailsSkeleton() {
       </div>
     </div>
   );
+}
+
+// Обновляем типы для generateMetadata
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: SearchParams;
+}): Promise<Metadata> {
+  try {
+    const car = await getCarById(params.id);
+
+    if (!car) {
+      return {
+        title: 'Автомобиль не найден | AutoSalon',
+        description: 'К сожалению, запрашиваемый автомобиль не найден',
+      };
+    }
+
+    return {
+      title: `${car.brand} ${car.model} ${car.year} | AutoSalon`,
+      description: `${car.brand} ${car.model} ${car.year} года выпуска, ${car.mileage} км пробега, цена ${car.price.toLocaleString()} сом. Купить автомобиль в Бишкеке.`,
+      openGraph: {
+        title: `${car.brand} ${car.model} ${car.year}`,
+        description: `${car.brand} ${car.model} ${car.year} года выпуска, ${car.mileage} км пробега`,
+        images: [{ url: car.images[0] }],
+      },
+    };
+  } catch {
+    return {
+      title: 'Ошибка | AutoSalon',
+      description: 'Произошла ошибка при загрузке данных',
+    };
+  }
+}
+
+// Обновляем generateStaticParams чтобы генерировать статические пути для всех машин
+export async function generateStaticParams() {
+  const cars = getCars(); // Получаем все машины
+  return cars.map((car) => ({
+    id: car.id,
+  }));
 } 
