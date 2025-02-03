@@ -1,17 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
+import { Slider } from '@/components/ui/slider';
 import { X } from 'lucide-react';
 import { Car } from '@/types/car';
 import { cn } from '@/lib/utils';
@@ -34,11 +26,9 @@ export interface FilterValues {
 }
 
 export function Filters({ cars, onFiltersChange, className, compact }: FiltersProps) {
-  // Получаем уникальные значения для селектов
+  // Получаем только используемые значения
   const brands = Array.from(new Set(cars.map((car) => car.brand))).sort();
   const bodyTypes = Array.from(new Set(cars.map((car) => car.bodyType))).sort();
-  const transmissions = Array.from(new Set(cars.map((car) => car.transmission.type))).sort();
-  const fuelTypes = Array.from(new Set(cars.map((car) => car.fuel))).sort();
 
   // Находим минимальные и максимальные значения
   const minPrice = Math.min(...cars.map((car) => car.price));
@@ -56,7 +46,7 @@ export function Filters({ cars, onFiltersChange, className, compact }: FiltersPr
     fuelType: 'all',
   });
 
-  const handleFilterChange = (key: keyof FilterValues, value: any) => {
+  const handleFilterChange = (key: keyof FilterValues, value: string | number[]) => {
     const newFilters = { ...filters, [key]: value };
     setFilters(newFilters);
     onFiltersChange(newFilters);

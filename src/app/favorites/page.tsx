@@ -6,8 +6,6 @@ import { CarCard } from '@/components/car-card';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { useState } from 'react';
-import type { Car } from '@/types/car';
 
 export default function FavoritesPage() {
   const { favorites, toggleFavorite } = useFavorites();
