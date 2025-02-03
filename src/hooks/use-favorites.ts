@@ -3,17 +3,16 @@
 import { useState, useEffect } from 'react';
 
 export function useFavorites() {
-  const [favorites, setFavorites] = useState<string[]>([]);
-
-  // Загружаем избранное из localStorage при монтировании
-  useEffect(() => {
-    const savedFavorites = localStorage.getItem('favorites');
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites));
+  const [favorites, setFavorites] = useState<string[]>(() => {
+    // Получаем начальное значение из localStorage при инициализации
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('favorites');
+      return saved ? JSON.parse(saved) : [];
     }
-  }, []);
+    return [];
+  });
 
-  // Сохраняем избранное в localStorage при изменении
+  // Сохраняем в localStorage при каждом изменении favorites
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
@@ -22,13 +21,11 @@ export function useFavorites() {
     setFavorites((prev) => {
       if (prev.includes(id)) {
         return prev.filter((favId) => favId !== id);
+      } else {
+        return [...prev, id];
       }
-      return [...prev, id];
     });
   };
 
-  return {
-    favorites,
-    toggleFavorite,
-  };
+  return { favorites, toggleFavorite };
 } 

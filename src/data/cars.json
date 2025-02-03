@@ -11,10 +11,7 @@
       "state": "Новый",
       "engineVolume": 2.5,
       "fuel": "Бензин",
-      "transmission": {
-        "type": "Автомат",
-        "gears": 8
-      },
+      "transmission": { "type": "Автомат", "gears": 8 },
       "driveType": "Передний",
       "images": [
         "/images/cars/toyota-camry-1.jpg",
@@ -24,11 +21,7 @@
       "specs": {
         "power": 200,
         "acceleration": 8.7,
-        "consumption": {
-          "city": 11.4,
-          "highway": 6.8,
-          "mixed": 8.5
-        }
+        "consumption": { "city": 11.4, "highway": 6.8, "mixed": 8.5 }
       },
       "equipment": [
         "Климат-контроль",
@@ -38,61 +31,52 @@
         "Круиз-контроль",
         "Бесключевой доступ"
       ],
-      "color": {
-        "exterior": "Черный металлик",
-        "interior": "Бежевая кожа"
-      },
-      "availability": {
-        "status": "В наличии",
-        "location": "Бишкек, ул. Киевская, 77"
-      },
-      "discount": {
-        "amount": 200000,
-        "expires": "2024-03-31"
-      },
+      "color": { "exterior": "Черный металлик", "interior": "Бежевая кожа" },
+      "availability": { "status": "В наличии", "location": "Бишкек, ул. Киевская, 77" },
+      "discount": { "amount": 200000, "expires": "2024-03-31" },
       "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345678",
       "tiktokId": "7123456789012345678"
     },
     {
       "id": "2",
-      "brand": "Honda",
-      "model": "Fit",
-      "year": 2020,
-      "price": 1350000,
-      "mileage": 45000,
-      "bodyType": "Хэтчбек",
+      "brand": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2022,
+      "price": 7500000,
+      "mileage": 15000,
+      "bodyType": "Седан",
       "state": "С пробегом",
-      "engineVolume": 1.5,
+      "engineVolume": 2.0,
       "fuel": "Бензин",
       "transmission": {
-        "type": "Вариатор",
-        "gears": 0
+        "type": "Автомат",
+        "gears": 9
       },
-      "driveType": "Передний",
+      "driveType": "Полный",
       "images": [
-        "/images/cars/honda-fit-1.jpg",
-        "/images/cars/honda-fit-2.jpg",
-        "/images/cars/honda-fit-3.jpg"
+        "/images/cars/mercedes-e-1.jpg",
+        "/images/cars/mercedes-e-2.jpg",
+        "/images/cars/mercedes-e-3.jpg"
       ],
       "specs": {
-        "power": 131,
-        "acceleration": 9.5,
+        "power": 197,
+        "acceleration": 7.4,
         "consumption": {
-          "city": 7.2,
-          "highway": 5.4,
-          "mixed": 6.2
+          "city": 9.8,
+          "highway": 6.2,
+          "mixed": 7.6
         }
       },
       "equipment": [
-        "Кондиционер",
-        "Тканевый салон",
-        "Подогрев сидений",
-        "Камера заднего вида",
-        "Мультимедиа с Apple CarPlay"
+        "Панорамная крыша",
+        "Кожаный салон",
+        "Вентиляция сидений",
+        "Система кругового обзора",
+        "Адаптивный круиз-контроль"
       ],
       "color": {
-        "exterior": "Серебристый",
-        "interior": "Черная ткань"
+        "exterior": "Серебристый металлик",
+        "interior": "Черная кожа"
       },
       "availability": {
         "status": "В наличии",
@@ -103,11 +87,59 @@
     },
     {
       "id": "3",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "price": 8200000,
+      "mileage": 32000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 3.0,
+      "fuel": "Дизель",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 8
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/bmw-x5-1.jpg",
+        "/images/cars/bmw-x5-2.jpg",
+        "/images/cars/bmw-x5-3.jpg"
+      ],
+      "specs": {
+        "power": 249,
+        "acceleration": 7.5,
+        "consumption": {
+          "city": 8.9,
+          "highway": 6.7,
+          "mixed": 7.5
+        }
+      },
+      "equipment": [
+        "Панорамная крыша",
+        "Кожаный салон",
+        "Вентиляция сидений",
+        "Система кругового обзора",
+        "Адаптивная подвеска"
+      ],
+      "color": {
+        "exterior": "Синий металлик",
+        "interior": "Коричневая кожа"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345680",
+      "tiktokId": "7123456789012345680"
+    },
+    {
+      "id": "4",
       "brand": "Lexus",
       "model": "RX 350",
-      "year": 2021,
-      "price": 5800000,
-      "mileage": 25000,
+      "year": 2022,
+      "price": 7800000,
+      "mileage": 18000,
       "bodyType": "Внедорожник",
       "state": "С пробегом",
       "engineVolume": 3.5,
@@ -132,27 +164,496 @@
         }
       },
       "equipment": [
-        "Климат-контроль",
+        "Панорамная крыша",
         "Кожаный салон",
         "Вентиляция сидений",
-        "Панорамная крыша",
         "Система кругового обзора",
-        "Адаптивный круиз-контроль"
+        "Премиум аудиосистема"
       ],
       "color": {
         "exterior": "Белый перламутр",
-        "interior": "Коричневая кожа"
+        "interior": "Бежевая кожа"
       },
       "availability": {
         "status": "В наличии",
         "location": "Бишкек, ул. Киевская, 77"
       },
-      "discount": {
-        "amount": 300000,
-        "expires": "2024-03-31"
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345681",
+      "tiktokId": "7123456789012345681"
+    },
+    {
+      "id": "5",
+      "brand": "Honda",
+      "model": "CR-V",
+      "year": 2021,
+      "price": 4500000,
+      "mileage": 45000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 2.0,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Вариатор",
+        "gears": 0
       },
-      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345680",
-      "tiktokId": "7123456789012345680"
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/honda-crv-1.jpg",
+        "/images/cars/honda-crv-2.jpg",
+        "/images/cars/honda-crv-3.jpg"
+      ],
+      "specs": {
+        "power": 150,
+        "acceleration": 10.2,
+        "consumption": {
+          "city": 9.5,
+          "highway": 6.8,
+          "mixed": 7.9
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Тканевый салон",
+        "Подогрев сидений",
+        "Камера заднего вида",
+        "Круиз-контроль"
+      ],
+      "color": {
+        "exterior": "Серебристый",
+        "interior": "Черный"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345682",
+      "tiktokId": "7123456789012345682"
+    },
+    {
+      "id": "6",
+      "brand": "Volkswagen",
+      "model": "Tiguan",
+      "year": 2022,
+      "price": 3800000,
+      "mileage": 25000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 2.0,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Робот",
+        "gears": 7
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/vw-tiguan-1.jpg",
+        "/images/cars/vw-tiguan-2.jpg",
+        "/images/cars/vw-tiguan-3.jpg"
+      ],
+      "specs": {
+        "power": 180,
+        "acceleration": 8.5,
+        "consumption": {
+          "city": 9.2,
+          "highway": 6.5,
+          "mixed": 7.6
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Комбинированный салон",
+        "Подогрев сидений",
+        "Камера заднего вида",
+        "Парктроники"
+      ],
+      "color": {
+        "exterior": "Серый металлик",
+        "interior": "Черный"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345683",
+      "tiktokId": "7123456789012345683"
+    },
+    {
+      "id": "7",
+      "brand": "Hyundai",
+      "model": "Santa Fe",
+      "year": 2023,
+      "price": 4900000,
+      "mileage": 0,
+      "bodyType": "Внедорожник",
+      "state": "Новый",
+      "engineVolume": 2.5,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 8
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/hyundai-sf-1.jpg",
+        "/images/cars/hyundai-sf-2.jpg",
+        "/images/cars/hyundai-sf-3.jpg"
+      ],
+      "specs": {
+        "power": 180,
+        "acceleration": 9.2,
+        "consumption": {
+          "city": 10.8,
+          "highway": 7.2,
+          "mixed": 8.7
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Кожаный салон",
+        "Вентиляция сидений",
+        "Панорамная крыша",
+        "Система кругового обзора"
+      ],
+      "color": {
+        "exterior": "Темно-синий",
+        "interior": "Светло-серый"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345684",
+      "tiktokId": "7123456789012345684"
+    },
+    {
+      "id": "8",
+      "brand": "Audi",
+      "model": "Q7",
+      "year": 2021,
+      "price": 8500000,
+      "mileage": 35000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 3.0,
+      "fuel": "Дизель",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 8
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/audi-q7-1.jpg",
+        "/images/cars/audi-q7-2.jpg",
+        "/images/cars/audi-q7-3.jpg"
+      ],
+      "specs": {
+        "power": 249,
+        "acceleration": 7.1,
+        "consumption": {
+          "city": 8.9,
+          "highway": 6.4,
+          "mixed": 7.4
+        }
+      },
+      "equipment": [
+        "Четырехзонный климат-контроль",
+        "Кожаный салон",
+        "Вентиляция сидений",
+        "Матричные фары",
+        "Пневмоподвеска"
+      ],
+      "color": {
+        "exterior": "Черный металлик",
+        "interior": "Коричневый"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345685",
+      "tiktokId": "7123456789012345685"
+    },
+    {
+      "id": "9",
+      "brand": "Daewoo",
+      "model": "Nexia",
+      "year": 2020,
+      "price": 850000,
+      "mileage": 65000,
+      "bodyType": "Седан",
+      "state": "С пробегом",
+      "engineVolume": 1.5,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Механика",
+        "gears": 5
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/daewoo-nexia-1.jpg",
+        "/images/cars/daewoo-nexia-2.jpg",
+        "/images/cars/daewoo-nexia-3.jpg"
+      ],
+      "specs": {
+        "power": 105,
+        "acceleration": 12.5,
+        "consumption": {
+          "city": 9.5,
+          "highway": 6.8,
+          "mixed": 7.8
+        }
+      },
+      "equipment": [
+        "Кондиционер",
+        "Тканевый салон",
+        "Электростеклоподъемники",
+        "ABS",
+        "Подушка безопасности"
+      ],
+      "color": {
+        "exterior": "Белый",
+        "interior": "Серый"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345686",
+      "tiktokId": "7123456789012345686"
+    },
+    {
+      "id": "10",
+      "brand": "Chevrolet",
+      "model": "Cruze",
+      "year": 2021,
+      "price": 1850000,
+      "mileage": 42000,
+      "bodyType": "Седан",
+      "state": "С пробегом",
+      "engineVolume": 1.6,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 6
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/chevrolet-cruze-1.jpg",
+        "/images/cars/chevrolet-cruze-2.jpg",
+        "/images/cars/chevrolet-cruze-3.jpg"
+      ],
+      "specs": {
+        "power": 109,
+        "acceleration": 12.6,
+        "consumption": {
+          "city": 8.5,
+          "highway": 5.8,
+          "mixed": 6.8
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Тканевый салон",
+        "Подогрев сидений",
+        "Камера заднего вида",
+        "Мультимедиа"
+      ],
+      "color": {
+        "exterior": "Серебристый металлик",
+        "interior": "Черный"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345687",
+      "tiktokId": "7123456789012345687"
+    },
+    {
+      "id": "11",
+      "brand": "Kia",
+      "model": "K5",
+      "year": 2023,
+      "price": 3900000,
+      "mileage": 0,
+      "bodyType": "Седан",
+      "state": "Новый",
+      "engineVolume": 2.0,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 8
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/kia-k5-1.jpg",
+        "/images/cars/kia-k5-2.jpg",
+        "/images/cars/kia-k5-3.jpg"
+      ],
+      "specs": {
+        "power": 150,
+        "acceleration": 9.1,
+        "consumption": {
+          "city": 8.9,
+          "highway": 5.8,
+          "mixed": 7.0
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Кожаный салон",
+        "Вентиляция сидений",
+        "Система кругового обзора",
+        "Адаптивный круиз-контроль"
+      ],
+      "color": {
+        "exterior": "Красный металлик",
+        "interior": "Черный"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345688",
+      "tiktokId": "7123456789012345688"
+    },
+    {
+      "id": "12",
+      "brand": "Mitsubishi",
+      "model": "Outlander",
+      "year": 2022,
+      "price": 4200000,
+      "mileage": 28000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 2.0,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Вариатор",
+        "gears": 0
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/mitsubishi-outlander-1.jpg",
+        "/images/cars/mitsubishi-outlander-2.jpg",
+        "/images/cars/mitsubishi-outlander-3.jpg"
+      ],
+      "specs": {
+        "power": 150,
+        "acceleration": 11.7,
+        "consumption": {
+          "city": 9.8,
+          "highway": 6.7,
+          "mixed": 7.9
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Комбинированный салон",
+        "Подогрев сидений",
+        "Камера заднего вида",
+        "Круиз-контроль"
+      ],
+      "color": {
+        "exterior": "Серый металлик",
+        "interior": "Черный"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345689",
+      "tiktokId": "7123456789012345689"
+    },
+    {
+      "id": "13",
+      "brand": "Subaru",
+      "model": "Forester",
+      "year": 2021,
+      "price": 3900000,
+      "mileage": 42000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 2.0,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Вариатор",
+        "gears": 0
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/subaru-forester-1.jpg",
+        "/images/cars/subaru-forester-2.jpg",
+        "/images/cars/subaru-forester-3.jpg"
+      ],
+      "specs": {
+        "power": 150,
+        "acceleration": 10.3,
+        "consumption": {
+          "city": 9.5,
+          "highway": 6.8,
+          "mixed": 7.9
+        }
+      },
+      "equipment": ["Климат-контроль", "Тканевый салон", "Подогрев сидений", "EyeSight", "X-Mode"],
+      "color": {
+        "exterior": "Зеленый металлик",
+        "interior": "Черный"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345690",
+      "tiktokId": "7123456789012345690"
+    },
+    {
+      "id": "14",
+      "brand": "Geely",
+      "model": "Coolray",
+      "year": 2023,
+      "price": 2800000,
+      "mileage": 0,
+      "bodyType": "Кроссовер",
+      "state": "Новый",
+      "engineVolume": 1.5,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Робот",
+        "gears": 7
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/geely-coolray-1.jpg",
+        "/images/cars/geely-coolray-2.jpg",
+        "/images/cars/geely-coolray-3.jpg"
+      ],
+      "specs": {
+        "power": 150,
+        "acceleration": 8.4,
+        "consumption": {
+          "city": 8.2,
+          "highway": 5.9,
+          "mixed": 6.8
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Комбинированный салон",
+        "Панорамная крыша",
+        "Система кругового обзора",
+        "Беспроводная зарядка"
+      ],
+      "color": {
+        "exterior": "Оранжевый металлик",
+        "interior": "Черный с красным"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345691",
+      "tiktokId": "7123456789012345691"
     }
   ]
-} 
+}

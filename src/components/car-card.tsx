@@ -2,11 +2,13 @@
 
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Star, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { toast } from 'sonner'
 import type { Car } from '@/types/car'
 import Link from 'next/link'
 import Image from 'next/image'
+import { cn } from '@/lib/utils'
+import { HeartIcon } from '@/components/icons'
 
 interface CarCardProps extends Car {
   isFavorite: boolean
@@ -61,9 +63,17 @@ export function CarCard({
         </button>
         <button
           onClick={handleFavoriteClick}
-          className={`flex items-center justify-center rounded-md border h-10 w-10 transition-colors hover:bg-accent hover:text-accent-foreground ${isFavorite ? 'text-yellow-500 hover:text-yellow-600' : ''}`}
+          className={cn(
+            "flex items-center justify-center rounded-md border h-10 w-10 transition-colors hover:bg-accent hover:text-accent-foreground",
+            isFavorite && "text-yellow-500 hover:text-yellow-600"
+          )}
         >
-          <Star className={`h-4 w-4 ${isFavorite ? 'fill-current' : ''}`} />
+          <HeartIcon 
+            className={cn(
+              "h-5 w-5",
+              isFavorite && "fill-current"
+            )} 
+          />
         </button>
       </div>
     </div>
