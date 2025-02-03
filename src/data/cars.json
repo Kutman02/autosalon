@@ -1,0 +1,70 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2023,
+      "price": 2850000,
+      "mileage": 0,
+      "bodyType": "Седан",
+      "state": "Новый",
+      "engineVolume": 2.5,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 8
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/toyota-camry-1.jpg",
+        "/images/cars/toyota-camry-2.jpg",
+        "/images/cars/toyota-camry-3.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2022,
+      "price": 7200000,
+      "mileage": 15000,
+      "bodyType": "Внедорожник",
+      "state": "С пробегом",
+      "engineVolume": 3.0,
+      "fuel": "Дизель",
+      "transmission": {
+        "type": "Автомат",
+        "gears": 8
+      },
+      "driveType": "Полный",
+      "images": [
+        "/images/cars/bmw-x5-1.jpg",
+        "/images/cars/bmw-x5-2.jpg",
+        "/images/cars/bmw-x5-3.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "brand": "KIA",
+      "model": "Rio",
+      "year": 2023,
+      "price": 1450000,
+      "mileage": 0,
+      "bodyType": "Седан",
+      "state": "Новый",
+      "engineVolume": 1.6,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Механика",
+        "gears": 6
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/kia-rio-1.jpg",
+        "/images/cars/kia-rio-2.jpg",
+        "/images/cars/kia-rio-3.jpg"
+      ]
+    }
+  ]
+} 
