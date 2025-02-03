@@ -123,8 +123,8 @@ export function Filters({ cars, onFiltersChange, className, compact }: FiltersPr
             className={cn("my-4", compact && "my-2")}
           />
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <span>{filters.priceRange[0].toLocaleString()} ₽</span>
-            <span>{filters.priceRange[1].toLocaleString()} ₽</span>
+            <span>{filters.priceRange[0].toLocaleString()} с</span>
+            <span>{filters.priceRange[1].toLocaleString()} с</span>
           </div>
         </div>
       </div>

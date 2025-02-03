@@ -5,7 +5,7 @@
       "brand": "Toyota",
       "model": "Camry",
       "year": 2023,
-      "price": 2850000,
+      "price": 4200000,
       "mileage": 0,
       "bodyType": "Седан",
       "state": "Новый",
@@ -20,51 +20,139 @@
         "/images/cars/toyota-camry-1.jpg",
         "/images/cars/toyota-camry-2.jpg",
         "/images/cars/toyota-camry-3.jpg"
-      ]
+      ],
+      "specs": {
+        "power": 200,
+        "acceleration": 8.7,
+        "consumption": {
+          "city": 11.4,
+          "highway": 6.8,
+          "mixed": 8.5
+        }
+      },
+      "equipment": [
+        "Климат-контроль",
+        "Кожаный салон",
+        "Подогрев сидений",
+        "Камера заднего вида",
+        "Круиз-контроль",
+        "Бесключевой доступ"
+      ],
+      "color": {
+        "exterior": "Черный металлик",
+        "interior": "Бежевая кожа"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "discount": {
+        "amount": 200000,
+        "expires": "2024-03-31"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345678",
+      "tiktokId": "7123456789012345678"
     },
     {
       "id": "2",
-      "brand": "BMW",
-      "model": "X5",
-      "year": 2022,
-      "price": 7200000,
-      "mileage": 15000,
+      "brand": "Honda",
+      "model": "Fit",
+      "year": 2020,
+      "price": 1350000,
+      "mileage": 45000,
+      "bodyType": "Хэтчбек",
+      "state": "С пробегом",
+      "engineVolume": 1.5,
+      "fuel": "Бензин",
+      "transmission": {
+        "type": "Вариатор",
+        "gears": 0
+      },
+      "driveType": "Передний",
+      "images": [
+        "/images/cars/honda-fit-1.jpg",
+        "/images/cars/honda-fit-2.jpg",
+        "/images/cars/honda-fit-3.jpg"
+      ],
+      "specs": {
+        "power": 131,
+        "acceleration": 9.5,
+        "consumption": {
+          "city": 7.2,
+          "highway": 5.4,
+          "mixed": 6.2
+        }
+      },
+      "equipment": [
+        "Кондиционер",
+        "Тканевый салон",
+        "Подогрев сидений",
+        "Камера заднего вида",
+        "Мультимедиа с Apple CarPlay"
+      ],
+      "color": {
+        "exterior": "Серебристый",
+        "interior": "Черная ткань"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345679",
+      "tiktokId": "7123456789012345679"
+    },
+    {
+      "id": "3",
+      "brand": "Lexus",
+      "model": "RX 350",
+      "year": 2021,
+      "price": 5800000,
+      "mileage": 25000,
       "bodyType": "Внедорожник",
       "state": "С пробегом",
-      "engineVolume": 3.0,
-      "fuel": "Дизель",
+      "engineVolume": 3.5,
+      "fuel": "Бензин",
       "transmission": {
         "type": "Автомат",
         "gears": 8
       },
       "driveType": "Полный",
       "images": [
-        "/images/cars/bmw-x5-1.jpg",
-        "/images/cars/bmw-x5-2.jpg",
-        "/images/cars/bmw-x5-3.jpg"
-      ]
-    },
-    {
-      "id": "3",
-      "brand": "KIA",
-      "model": "Rio",
-      "year": 2023,
-      "price": 1450000,
-      "mileage": 0,
-      "bodyType": "Седан",
-      "state": "Новый",
-      "engineVolume": 1.6,
-      "fuel": "Бензин",
-      "transmission": {
-        "type": "Механика",
-        "gears": 6
+        "/images/cars/lexus-rx-1.jpg",
+        "/images/cars/lexus-rx-2.jpg",
+        "/images/cars/lexus-rx-3.jpg"
+      ],
+      "specs": {
+        "power": 300,
+        "acceleration": 7.9,
+        "consumption": {
+          "city": 12.6,
+          "highway": 8.4,
+          "mixed": 10.2
+        }
       },
-      "driveType": "Передний",
-      "images": [
-        "/images/cars/kia-rio-1.jpg",
-        "/images/cars/kia-rio-2.jpg",
-        "/images/cars/kia-rio-3.jpg"
-      ]
+      "equipment": [
+        "Климат-контроль",
+        "Кожаный салон",
+        "Вентиляция сидений",
+        "Панорамная крыша",
+        "Система кругового обзора",
+        "Адаптивный круиз-контроль"
+      ],
+      "color": {
+        "exterior": "Белый перламутр",
+        "interior": "Коричневая кожа"
+      },
+      "availability": {
+        "status": "В наличии",
+        "location": "Бишкек, ул. Киевская, 77"
+      },
+      "discount": {
+        "amount": 300000,
+        "expires": "2024-03-31"
+      },
+      "tiktokUrl": "https://www.tiktok.com/@autosalon.kg/video/7123456789012345680",
+      "tiktokId": "7123456789012345680"
     }
   ]
 } 

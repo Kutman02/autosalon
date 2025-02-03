@@ -1,7 +1,7 @@
 'use client';
 
-import { useLocalStorage } from '@/hooks/use-local-storage';
-import { getCars } from '@/lib/cars';
+import { useFavorites } from '@/hooks/use-favorites';
+import { getCars } from '@/data/cars';
 import { CarCard } from '@/components/car-card';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
@@ -10,18 +10,12 @@ import { useState } from 'react';
 import type { Car } from '@/types/car';
 
 export default function FavoritesPage() {
-  const [favorites, setFavorites] = useLocalStorage<string[]>('favorites', []);
-  const [cars] = useState<Car[]>(() => getCars());
-
-  const favoriteCars = cars.filter((car) => favorites.includes(car.id));
-
-  const handleFavoriteToggle = (id: string) => {
-    setFavorites((prev) => prev.filter((fId) => fId !== id));
-    toast.success('Удалено из избранного');
-  };
+  const { favorites, toggleFavorite } = useFavorites();
+  const allCars = getCars();
+  const favoriteCars = allCars.filter((car) => favorites.includes(car.id));
 
   const handleClearAll = () => {
-    setFavorites([]);
+    toggleFavorite('');
     toast.success('Список избранного очищен');
   };
 
@@ -56,7 +50,7 @@ export default function FavoritesPage() {
             key={car.id}
             {...car}
             isFavorite={true}
-            onFavoriteToggle={handleFavoriteToggle}
+            onFavoriteToggle={toggleFavorite}
           />
         ))}
       </div>
