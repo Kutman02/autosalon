@@ -4,21 +4,14 @@ import { CarDetails } from './car-details';
 import { Skeleton } from '@/components/ui/skeleton';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import type { PageProps } from '@/types/page';
 
 export const revalidate = 3600; // Обновлять кэш каждый час
 
-type SearchParams = { [key: string]: string | string[] | undefined };
+type Props = {
+  params: { id: string }
+}
 
-type CatalogItemParams = {
-  id: string;
-};
-
-// Определяем типы для страницы
-export default async function CatalogItemPage({
-  params,
-  searchParams,
-}: PageProps<CatalogItemParams>) {
+export default async function CatalogItemPage({ params }: Props) {
   try {
     const car = await getCarById(params.id);
 
@@ -75,14 +68,7 @@ function CarDetailsSkeleton() {
   );
 }
 
-// Обновляем типы для generateMetadata
-export async function generateMetadata({
-  params,
-  searchParams,
-}: {
-  params: { id: string };
-  searchParams: SearchParams;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const car = await getCarById(params.id);
 
@@ -110,9 +96,8 @@ export async function generateMetadata({
   }
 }
 
-// Обновляем generateStaticParams чтобы генерировать статические пути для всех машин
 export async function generateStaticParams() {
-  const cars = getCars(); // Получаем все машины
+  const cars = getCars();
   return cars.map((car) => ({
     id: car.id,
   }));
